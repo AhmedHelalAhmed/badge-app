@@ -1,6 +1,9 @@
 <template>
   <div>
     <the-header></the-header>
+    <!-- can be like that -->
+    <TheHeader />
+    <!-- or can be like that-->
     <badge-list></badge-list>
     <user-info
       :full-name="activeUser.name"
@@ -15,7 +18,7 @@ import TheHeader from "./components/TheHeader.vue";
 
 export default {
   components: {
-    "the-header": TheHeader, // register component locally
+    TheHeader: TheHeader, // register component locally
   },
   data() {
     return {
