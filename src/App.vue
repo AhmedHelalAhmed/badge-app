@@ -21,7 +21,14 @@
     <manage-goals v-if="selectedComponent === 'manage-goals'"></manage-goals>
     -->
     <!-- dynamic component -->
-    <component :is="selectedComponent"></component>
+    <!-- 
+        keep-alive  
+        - this to not destroy component when switch between them 
+        - state will be cached
+        -->
+    <keep-alive>
+      <component :is="selectedComponent"></component>
+    </keep-alive>
     <!-- dynamic component -->
   </div>
 </template>
