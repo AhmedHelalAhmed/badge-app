@@ -1,6 +1,11 @@
 <template>
   <div>
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <!-- default slot -->
     <slot></slot>
+    <!-- default slot -->
   </div>
 </template>
 
