@@ -16,8 +16,13 @@
     </course-goals>
     <button @click="setSelectedComponent('active-goals')">Active Goals</button>
     <button @click="setSelectedComponent('manage-goals')">Manage Goals</button>
+    <!--
     <active-goals v-if="selectedComponent === 'active-goals'"></active-goals>
     <manage-goals v-if="selectedComponent === 'manage-goals'"></manage-goals>
+    -->
+    <!-- dynamic component -->
+    <component :is="selectedComponent"></component>
+    <!-- dynamic component -->
   </div>
 </template>
 
