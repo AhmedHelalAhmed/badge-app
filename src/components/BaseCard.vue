@@ -1,7 +1,11 @@
 <template>
   <div>
     <header>
-      <slot name="header"></slot>
+      <slot name="header">
+        <!-- default content if not set -->
+        <h2>The default</h2>
+        <!-- default content if not set -->
+      </slot>
     </header>
     <!-- default slot -->
     <slot></slot>
