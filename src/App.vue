@@ -7,12 +7,11 @@
       :info-text="activeUser.description"
       :role="activeUser.role"
     ></user-info>
-    <course-goals>
-      <template #default="slotProps">
-        <!-- slotProps any name -->
-        <h2>{{ slotProps.item }}</h2>
-        <p>{{ slotProps.anotherProp }}</p>
-      </template>
+    <course-goals #default="slotProps">
+      <!-- you can remove template in case there is only default slot -->
+      <!-- slotProps any name -->
+      <h2>{{ slotProps.item }}</h2>
+      <p>{{ slotProps.anotherProp }}</p>
     </course-goals>
   </div>
 </template>
