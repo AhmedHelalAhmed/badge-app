@@ -1,18 +1,21 @@
 <template>
   <div>
     <the-header></the-header>
-    <badge-list></badge-list>
+    <badge-list v-if="false"></badge-list>
     <user-info
+      v-if="false"
       :full-name="activeUser.name"
       :info-text="activeUser.description"
       :role="activeUser.role"
     ></user-info>
-    <course-goals #default="slotProps">
+    <course-goals #default="slotProps" v-if="false">
       <!-- you can remove template in case there is only default slot -->
       <!-- slotProps any name -->
       <h2>{{ slotProps.item }}</h2>
       <p>{{ slotProps.anotherProp }}</p>
     </course-goals>
+    <active-goals></active-goals>
+    <manage-goals></manage-goals>
   </div>
 </template>
 
@@ -21,13 +24,17 @@ import TheHeader from "./components/TheHeader.vue";
 import BadgeList from "./components/BadgeList.vue";
 import UserInfo from "./components/UserInfo.vue";
 import CourseGoals from "./components/CourseGoals.vue";
+import ActiveGoals from "./components/ActiveGoals.vue";
+import ManageGoals from "./components/ManageGoals.vue";
 
 export default {
   components: {
     TheHeader,
     BadgeList,
     UserInfo,
-    CourseGoals, // register component locally
+    CourseGoals,
+    ActiveGoals,
+    ManageGoals, // register component locally
   },
   data() {
     return {
