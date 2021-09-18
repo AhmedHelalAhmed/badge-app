@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header>
+    <header v-if="$slots.header">
       <slot name="header">
         <!-- default content if not set -->
-        <h2>The default</h2>
+        <!-- <h2>The default</h2> -->
         <!-- default content if not set -->
       </slot>
     </header>
@@ -14,7 +14,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this.$slots.header);
+  },
+};
 </script>
 
 <style scoped>
